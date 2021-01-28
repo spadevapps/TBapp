@@ -1,0 +1,22 @@
+
+<div class="header">
+  <div class="container">
+    <h1><%= @department.name %> </h1>
+  </div>
+</div>
+
+<div class="department">
+  <div class="container">
+    <h2><%= @department.name %></h2>
+
+    <div class="cards row">
+      <% @books.each do |b| %>
+      <div class="card col-xs-4">
+        <h2><%= b.title %></h2>
+        <%= link_to "View Book", book_path(b) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <%= link_to 'Add Book', new_book_path %>
+</div>

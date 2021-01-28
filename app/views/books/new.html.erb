@@ -1,0 +1,24 @@
+<div class="header">
+  <div class="container">
+    <img src="http://s3.amazonaws.com/codecademy-content/courses/learn-rails/img/logo-1m.svg">
+    <h1>Messenger</h1>
+  </div>
+</div>
+
+<div class="create">
+  <div class="container">
+
+    <!-- Your code here -->
+    <%= form_for(@book) do |b| %>
+  <div class="field">
+    <p>Title: <%= b.text_field :title %> <p>
+    <p>Author: <%= b.text_field :author %></p>
+    <p>ISBN: <%= b.text_field :isbn %></p>
+    <p>Edition: <%= b.text_field :edition %></p>
+  </div>
+  <div class="actions">
+    <%= b.submit "Create" %>
+  </div>
+<% end %>
+  </div>
+</div>
